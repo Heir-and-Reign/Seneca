@@ -21,8 +21,8 @@ using namespace std::chrono;
 namespace sict {
     
     
-    // constructor
-    Timekeeper::Timekeeper()  { m_recordCount = 0; }
+   
+    Timekeeper::Timekeeper() : m_timeStart {}, m_timeEnd {} { };
     
     
     void Timekeeper::start() { m_timeStart = std::chrono::steady_clock::now(); }
@@ -61,6 +61,7 @@ namespace sict {
         
         // timeDuration = duration_cast<duration<double>>(timeEnd - timeStart);
         }
+    
  
     
     // namespace end
